@@ -196,16 +196,13 @@ type ChildActorNode(nodeIndex : int , lengthOfNeighboursList : int , supervisorA
                                                 let randomInt = System.Random().Next(lengthOfNeighboursList)
                                                 let neighbourNode : int = (globalMap.[nodeIndex]).Item(randomInt)
                                                 let nodePathNbr : string = "user/ChildActorNode_" + string neighbourNode
-                                                // printf "%d" (nodeIndex)
-                                                // printf " %d" (neighbourNode)
-                                                // printfn " %d" (floodingMessageCounter)
                                                 let nodePathOwn : string = "user/ChildActorNode_" + string nodeIndex
                                                 system.ActorSelection(nodePathNbr) <! "Hello"
                                                 system.ActorSelection(nodePathOwn) <! ("Hello",1)
-                                        //   else
+                                          else
 
-    //                                             let nodePathOwn : string = "user/ChildActorNode_" + string nodeIndex
-    //                                             system.ActorSelection(nodePathOwn) <! ("Hello",1)
+                                                let nodePathOwn : string = "user/ChildActorNode_" + string nodeIndex
+                                                system.ActorSelection(nodePathOwn) <! ("Hello",1)
 
                                       
                
