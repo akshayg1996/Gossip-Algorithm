@@ -82,7 +82,7 @@ let lineTopology (numberOfNodesInCluster : int) =
                 globalMap.Add(i,referenceList3)
     
 
-//this method builds the 2D topology
+//this method builds the 3D topology
 let topology3DMap (numberOfNodesInCluster : int) =
         let cubeRootValue: int =Convert.ToInt32(Math.Ceiling(Math.Cbrt(float numberOfNodesInCluster)))
         let mutable start:int =0
@@ -126,7 +126,7 @@ let topology3DMap (numberOfNodesInCluster : int) =
             start<- stop
 
 
-//this method builds the imperfect 2D map topology
+//this method builds the imperfect 3D map topology
 let imperfect3dMapTopology (numberOfNodesInCluster : int) =
         let cubeRootValue: int =Convert.ToInt32(Math.Ceiling(Math.Cbrt(float numberOfNodesInCluster)))
         let mutable start:int =0
